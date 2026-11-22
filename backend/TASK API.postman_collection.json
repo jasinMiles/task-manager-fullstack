@@ -1,0 +1,257 @@
+{
+  "info": {
+    "_postman_id": "15feb253-c638-4ee5-86e6-7fb8b0b15829",
+    "name": "TASK API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26708998"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Test User\",\r\n  \"email\": \"testit@example.com\",\r\n  \"password\": \"TestPassword123!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://task-api-nbe4.onrender.com/api/auth/register",
+          "protocol": "https",
+          "host": [
+            "task-api-nbe4",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"testit@example.com\",\r\n  \"password\": \"TestPassword123!\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://task-api-nbe4.onrender.com/api/auth/login",
+          "protocol": "https",
+          "host": [
+            "task-api-nbe4",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Task",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"new Learn Postman\",\r\n  \"description\": \"new Test the Task API using Postman\",\r\n  \"status\": \"pending\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://task-api-nbe4.onrender.com/api/tasks",
+          "protocol": "https",
+          "host": [
+            "task-api-nbe4",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Tasks",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://task-api-nbe4.onrender.com/api/tasks",
+          "protocol": "https",
+          "host": [
+            "task-api-nbe4",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Task",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://task-api-nbe4.onrender.com/api/tasks/6adc02f288d0968235b34c75",
+          "protocol": "https",
+          "host": [
+            "task-api-nbe4",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "tasks",
+            "6adc02f288d0968235b34c75"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Task",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Updated Task\",\r\n  \"description\": \"Task updated through Postman\",\r\n  \"status\": \"completed\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://task-api-nbe4.onrender.com/api/tasks/6adc02f288d0968235b34c75",
+          "protocol": "https",
+          "host": [
+            "task-api-nbe4",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "tasks",
+            "6adc02f288d0968235b34c75"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Task",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "https://task-api-nbe4.onrender.com/api/tasks/6adc02f288d0968235b34c75",
+          "protocol": "https",
+          "host": [
+            "task-api-nbe4",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "tasks",
+            "6adc02f288d0968235b34c75"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer"
+  }
+}
